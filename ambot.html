@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiiiiii</title>
+    <style>
+        body {
+            font-family: Candara, Oswald;
+            text-align: center;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 24px;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        #botao1, #botao2 {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <p>Street food tomorrow after e tech?</p>
+    <img src="https://media.tenor.com/zGm5acSjHCIAAAAM/cat-begging.gif" alt="Cat GIF">
+    <button id="botao1">YES</button>
+    <button id="botao2">NO</button>
+    <script>
+        document.getElementById('botao1').addEventListener('click', function() {
+            alert('EYYY LIBRE NAKO!!!');
+        });
+
+        const button2 = document.getElementById('botao2');
+        let left = 40;
+
+        button2.addEventListener('click', function() {
+            alert('Clicked NO');
+        });
+
+        button2.addEventListener('touchstart', function() {
+            if (left === 40) {
+                left = 44;
+            } else {
+                left = 40;
+            }
+            this.style.left = left + '%';
+        });
+    </script>
+</body>
+</html>
